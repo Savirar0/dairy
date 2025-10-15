@@ -13,6 +13,7 @@
         "e:\\Studies and stuff\\JavFX\\javafx-sdk-24.0.2\\lib\\javafx-swt.jar",
         "e:\\Studies and stuff\\JavFX\\javafx-sdk-24.0.2\\lib\\jdk.jsobject.jar",
         "e:\\Studies and stuff\\JavFX\\javafx-sdk-24.0.2\\lib\\jfx.incubator.input.jar",
-        "e:\\Studies and stuff\\JavFX\\javafx-sdk-24.0.2\\lib\\jfx.incubator.richtext.jar"
+        "e:\\Studies and stuff\\JavFX\\javafx-sdk-24.0.2\\lib\\jfx.incubator.richtext.jar",
+        "e:\\Studies and stuff\\JavFX\\sqlite-jdbc-3.50.3.0.jar"
     ]
 }

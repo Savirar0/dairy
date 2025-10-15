@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom right, #fff1eb, #ace0f9);;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.loginController">
    <children>
       <Label fx:id="titlelabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="234.0" text="Memento" textAlignment="CENTER">
@@ -19,7 +18,7 @@
       <PasswordField fx:id="passwordField" layoutX="201.0" layoutY="174.0" prefHeight="26.0" prefWidth="196.0" promptText="password" />
       <Button fx:id="lognButton" layoutX="273.0" layoutY="226.0" mnemonicParsing="false" onAction="#login" text="Login" />
       <Button fx:id="createButton" layoutX="217.0" layoutY="355.0" mnemonicParsing="false" onAction="#signup" prefHeight="30.0" prefWidth="165.0" text="Create profile" />
-      <Label fx:id="msg" layoutX="261.0" layoutY="83.0" text="Welcome!">
+      <Label fx:id="msg" alignment="CENTER" contentDisplay="CENTER" layoutX="179.0" layoutY="82.0" prefHeight="30.0" prefWidth="250.0" text="Welcome!">
          <font>
             <Font name="Segoe Print" size="16.0" />
          </font>

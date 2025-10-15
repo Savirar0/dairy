@@ -1,16 +1,17 @@
 package controllers;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
-import database.DatabaseConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import database.DatabaseConnection;
 
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
@@ -19,64 +20,63 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class loginController {
-
-    @FXML
-    private Button createButton;
-
-    @FXML
-    private Button lognButton;
-
-    @FXML
-    private PasswordField passwordField;
-
-    @FXML
-    private Label titlelabel;
+public class signupController {
 
     @FXML
     private Label msg;
 
     @FXML
+    private PasswordField passwordField;
+
+    @FXML
+    private PasswordField passwordagain;
+
+    @FXML
+    private Button signupButton;
+
+    @FXML
+    private Label titlelabel;
+
+    @FXML
     private TextField usernameField;
+
+    @FXML
+    private Button loginButton;
+
+    boolean isValid = false;
 
     @FXML
     void login(ActionEvent event) {
         String user = usernameField.getText();
         String pass=passwordField.getText();
-        if(user.isEmpty() || pass.isEmpty()){
+        String pass2=passwordagain.getText();
+        if(user.isEmpty() || pass.isEmpty() || pass2.isEmpty()){
             msg.setText("Please fill all the fields!");
             return;
         }
-        String sql = "select * from users where username=? and password=?";
+        if(!pass.equals(pass2)){
+            msg.setText("Passwords do not match!");
+            return;
+        }
+        String sql = "insert into users(username,password) values(?,?)";
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)){
-                pstmt.setString(1, user);
-                pstmt.setString(2, pass);
+            pstmt.setString(1, user);
+            pstmt.setString(2, pass);
+            pstmt.executeUpdate();
+            msg.setStyle("-fx-text-fill: green;");
+            msg.setText("Signup successful! Click login to proceed.");
 
-                ResultSet rs = pstmt.executeQuery();
-                if (rs.next()){
-                    msg.setStyle("-fx-text-fill: green;");
-                     msg.setText("Login successful!");
-                    //TODO : to switch to main page
-
-                }else{
-                    msg.setStyle("-fx-text-fill: red;");
-                    msg.setText("Login failed!");
-                }
-
-                
-             } catch (SQLException e) {
+        } catch (SQLException e) {
             msg.setText("Database Error. Please try again.");
-            e.printStackTrace(); 
+            e.printStackTrace();
         }
-    }   
-    
+    }
 
     @FXML
-    void signup(ActionEvent event) {
-        //"/fxmlsViews/signup.fxml"
+    void loginPage(ActionEvent event) {
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/fxmlsViews/signup.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxmlsViews/login.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -85,6 +85,7 @@ public class loginController {
         System.err.println("Error loading the signup.fxml file.");
         e.printStackTrace();
     }
+
     }
 
 }
