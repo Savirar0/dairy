@@ -1,4 +1,10 @@
 package controllers;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import database.DatabaseConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,6 +39,28 @@ public class loginController {
         if(user.isEmpty() || pass.isEmpty()){
             msg.setText("Please fill all the fields!");
             return;
+        }
+        String sql = "select * from users where username=? and password=?";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)){
+                pstmt.setString(1, user);
+                pstmt.setString(2, pass);
+
+                ResultSet rs = pstmt.executeQuery();
+                if (rs.next()){
+                    msg.setStyle("-fx-text-fill: green;");
+                     msg.setText("Login successful!");
+                    //TODO : to switch to main page
+
+                }else{
+                    msg.setStyle("-fx-text-fill: red;");
+                    msg.setText("Login failed!");
+                }
+
+                
+             } catch (SQLException e) {
+            msg.setText("Database Error. Please try again.");
+            e.printStackTrace(); 
         }
     }
 
