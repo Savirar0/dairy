@@ -20,7 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class signupController {
+public class SignupController {
 
     @FXML
     private Label msg;
