@@ -7,23 +7,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom right, #fff1eb, #ace0f9);" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.signupController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom right, #fff1eb, #ace0f9);" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupController">
+
    <children>
-      <Label fx:id="titlelabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="234.0" text="Memento" textAlignment="CENTER">
+      <Label fx:id="titlelabel" alignment="TOP_CENTER" layoutX="234.0" text="Memento" textAlignment="CENTER">
          <font>
             <Font name="Segoe Print" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameField" layoutX="201.0" layoutY="153.0" prefHeight="26.0" prefWidth="196.0" promptText="username" />
-      <PasswordField fx:id="passwordField" layoutX="201.0" layoutY="187.0" prefHeight="26.0" prefWidth="196.0" promptText="password" />
-      <Button fx:id="signupButton" layoutX="254.0" layoutY="280.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: linear-gradient(#f2fff8, #dffbf0);;" text="Sign up!" textAlignment="CENTER" />
-      <Label fx:id="msg" alignment="CENTER" contentDisplay="CENTER" layoutX="179.0" layoutY="82.0" prefHeight="30.0" prefWidth="250.0" text="Welcome!">
+
+      <Label fx:id="msg" alignment="CENTER" layoutX="179.0" layoutY="82.0" prefHeight="30.0" prefWidth="250.0" text="Welcome!">
          <font>
             <Font name="Segoe Print" size="16.0" />
          </font>
       </Label>
-      <PasswordField fx:id="passwordagain" layoutX="201.0" layoutY="223.0" prefHeight="26.0" prefWidth="196.0" promptText="password again" />
-      <Button fx:id="loginButton" layoutX="254.0" layoutY="360.0" mnemonicParsing="false" onAction="#loginPage" prefHeight="14.0" prefWidth="90.0" style="-fx-background-color: linear-gradient(#f2fff8linear-gradient(#f2fff8, #dffbf0);, #dffbf0);" text="Login!" textAlignment="CENTER" textFill="#0f6b52">
+
+      <TextField fx:id="usernameField" layoutX="201.0" layoutY="153.0" prefHeight="26.0" prefWidth="196.0" promptText="Username" />
+      <PasswordField fx:id="passwordField" layoutX="201.0" layoutY="187.0" prefHeight="26.0" prefWidth="196.0" promptText="Password" />
+      <PasswordField fx:id="passwordagain" layoutX="201.0" layoutY="223.0" prefHeight="26.0" prefWidth="196.0" promptText="Re-enter Password" />
+
+      <Button fx:id="signupButton" layoutX="254.0" layoutY="280.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: linear-gradient(#f2fff8, #dffbf0);" text="Sign up!" textAlignment="CENTER" />
+
+      <Button fx:id="loginButton" layoutX="254.0" layoutY="340.0" mnemonicParsing="false" onAction="#loginPage" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: linear-gradient(#f2fff8, #dffbf0);" text="Login!" textAlignment="CENTER" textFill="#0f6b52">
          <font>
             <Font size="13.0" />
          </font>

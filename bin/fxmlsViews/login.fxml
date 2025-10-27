@@ -16,7 +16,10 @@
       </Label>
       <TextField fx:id="usernameField" layoutX="201.0" layoutY="134.0" prefHeight="26.0" prefWidth="196.0" promptText="username" />
       <PasswordField fx:id="passwordField" layoutX="201.0" layoutY="174.0" prefHeight="26.0" prefWidth="196.0" promptText="password" />
-      <Button fx:id="lognButton" layoutX="273.0" layoutY="226.0" mnemonicParsing="false" onAction="#login" text="Login" />
+      <Button fx:id="lognButton" layoutX="273.0" layoutY="226.0" mnemonicParsing="false" onAction="#login" text="Login">
+         <font>
+            <Font name="Agency FB" size="12.0" />
+         </font></Button>
       <Button fx:id="createButton" layoutX="217.0" layoutY="355.0" mnemonicParsing="false" onAction="#signup" prefHeight="30.0" prefWidth="165.0" text="Create profile" />
       <Label fx:id="msg" alignment="CENTER" contentDisplay="CENTER" layoutX="179.0" layoutY="82.0" prefHeight="30.0" prefWidth="250.0" text="Welcome!">
          <font>
