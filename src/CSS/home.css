@@ -1,0 +1,105 @@
+.button {
+    -fx-background-color: linear-gradient(to bottom right, #2F3542, #3742FA);
+    -fx-text-fill: #F1F2F6;
+    -fx-font-family: 'Roboto', 'Arial', sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+    -fx-background-insets: 0;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-transition: all 0.3s ease;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #FF6B6B, #FF4757);
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.5), 15, 0, 0, 4);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom right, #2874A6, #1F618D);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 3);
+}
+
+.progress-bar {
+    -fx-accent: #2ecc71;
+    -fx-control-inner-background: #2c3e50;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(
+        to right, 
+        #2ecc71, 
+        #27ae60, 
+        #2ecc71
+    );
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.5), 10, 0, 0, 0);
+}
+
+.progress-bar .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 15px;
+}
+
+
+#ade {
+    -fx-padding: 14 36 14 36;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #4f46e5;
+    -fx-background-color: #f5f3ff;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+    -fx-border-color: #e9d5ff;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(79, 70, 229, 0.12), 15, 0.3, 0, 4);
+}
+
+#ade:hover {
+    -fx-background-color: #ede9fe;
+    -fx-border-color: #d8b4fe;
+    -fx-text-fill: #5b21b6;
+    -fx-effect: dropshadow(gaussian, rgba(79, 70, 229, 0.18), 18, 0.4, 0, 6);
+}
+
+#ve {
+    -fx-padding: 13 30 13 30;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to right, #10b981, #059669);
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(16, 185, 129, 0.3), 12, 0.4, 0, 4);
+    -fx-font-family: "Segoe UI", "SF Pro Display", system-ui;
+}
+
+#ve:hover {
+    -fx-background-color: linear-gradient(to right, #34d399, #10b981);
+    -fx-effect: dropshadow(gaussian, rgba(16, 185, 129, 0.4), 16, 0.5, 0, 6);
+    -fx-translate-y: -2;
+}
+
+#ve:pressed {
+    -fx-background-color: linear-gradient(to right, #059669, #047857);
+    -fx-translate-y: 0;
+}
+
+
+.label {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: linear-gradient(to right, #667eea, #764ba2);
+    -fx-font-family: "Inter", "SF Pro Display", system-ui;
+}
