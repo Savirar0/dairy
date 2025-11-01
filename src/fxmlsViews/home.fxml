@@ -66,8 +66,7 @@
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
                   <Button id="ade" fx:id="addEntry" layoutX="250.0" layoutY="74.0" mnemonicParsing="false" onAction="#addEn" stylesheets="@../CSS/home.css" text="Add Entry" />
-                  <Button id="ve" fx:id="viewEntries" layoutX="250.0" layoutY="155.0" mnemonicParsing="false" stylesheets="@../CSS/home.css" text="View Entries" />
-                  <Button id="ve" fx:id="viewEntries1" layoutX="260.0" layoutY="165.0" mnemonicParsing="false" stylesheets="@../CSS/home.css" text="View Entries" />
+                  <Button id="ve" fx:id="viewEntries" layoutX="250.0" layoutY="155.0" mnemonicParsing="false" onAction="#viewEn" stylesheets="@../CSS/home.css" text="View Entries" />
                </children>
             </AnchorPane>
          </children>

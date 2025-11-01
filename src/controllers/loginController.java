@@ -94,7 +94,7 @@ public class loginController {
     }
 
     @FXML
-    void signup(ActionEvent event) {
+    void signupp(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxmlsViews/signup.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
