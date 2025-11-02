@@ -15,7 +15,13 @@ public class homeController {
     private Button logoutBtn;
 
     @FXML
+    private Label progbarLbl;
+
+    @FXML
     private ProgressBar progressBar;
+
+    @FXML
+    private Button share;
 
     @FXML
     private Label titlelabel;
@@ -33,6 +39,11 @@ public class homeController {
 
     @FXML
     void logout(ActionEvent event) {
+
+    }
+
+    @FXML
+    void shareEn(ActionEvent event) {
 
     }
 
