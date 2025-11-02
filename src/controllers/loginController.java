@@ -67,11 +67,16 @@ public class loginController {
                 msg.setStyle("-fx-text-fill: green;");
                 msg.setText("Login successful!");
 
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
                 PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
                 pause.setOnFinished(ev -> {
                     try {
-                        Parent root = FXMLLoader.load(getClass().getResource("/fxmlsViews/home.fxml"));
-                        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxmlsViews/home.fxml"));
+                        Parent root = loader.load();
+                        homeController homeController = loader.getController();
+                        homeController.setUsername(user);
+                        
                         Scene scene = new Scene(root);
                         stage.setScene(scene);
                         stage.show();

@@ -32,6 +32,14 @@ public class homeController {
     @FXML
     private Label welcome;
 
+    private String username;
+
+    @FXML
+    void setUsername(String username){
+      this.username = username;
+      titlelabel.setText("Welcome, "+username);
+    }
+
     @FXML
     void addEn(ActionEvent event) {
 
