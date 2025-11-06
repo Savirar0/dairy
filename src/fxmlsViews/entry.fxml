@@ -8,16 +8,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="460.0" prefWidth="500.0" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom right, #fff1eb, #ace0f9);" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.loginController">
+<VBox alignment="CENTER" prefHeight="460.0" prefWidth="500.0" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom right, #fff1eb, #ace0f9);" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.entryController">
    <children>
-      <Label fx:id="titlelabel" text="Memento">
-         <font>
-            <Font name="Segoe Print" size="36.0" />
-         </font>
-         <VBox.margin>
-            <Insets bottom="10.0" />
-         </VBox.margin>
-      </Label>
+      <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="titlelabel" alignment="CENTER" contentDisplay="RIGHT" prefHeight="64.0" prefWidth="370.0" text="   Memento">
+               <font>
+                  <Font name="Segoe Print" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="60.0" text="Logout" />
+         </children>
+      </HBox>
       <Label fx:id="questionLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="228.0" text="QUESTION">
          <font>
             <Font name="Roboto" size="24.0" />

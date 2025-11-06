@@ -42,11 +42,12 @@
                </font>
             </Label>
 
-            <Label text="Your Progress (0/108)">
+            <Label fx:id="progbarLbl" text="Your Progress (0/108)">
                <font>
                   <Font size="14.0" />
-               </font>
+                </font>
             </Label>
+
 
             <ProgressBar fx:id="progressBar" maxWidth="400.0" prefWidth="300.0" progress="0.0" />
 
