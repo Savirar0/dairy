@@ -11,7 +11,7 @@ public class App extends Application {
 
     public void start(Stage stage){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/fxmlsViews/login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxmlsViews/home.fxml"));
             Scene scene = new Scene(root);
             //scene1.getStylesheets().add(getClass().getResource("Scene1.css").toExternalForm());
             stage.setScene(scene);
