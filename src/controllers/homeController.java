@@ -112,10 +112,42 @@ public class homeController {
     }
 
     @FXML
-    void shareEn(ActionEvent event) {
+void shareEn(ActionEvent event) {
+    try {
+        FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("/fxmlsViews/shareEntries.fxml")
+        );
+        Parent root = loader.load();
+
+        shareEntriesController controller = loader.getController();
+        controller.setUsername(username);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+}
+
 
     @FXML
     void viewEn(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxmlsViews/viewEntries.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            System.out.println("Successfully loaded view entries ✅");
+
+        } catch (IOException ex) {
+            System.err.println("Error loading the viewEntries.fxml file.");
+            ex.printStackTrace();
+        }
     }
 }

@@ -33,6 +33,9 @@ public class entryController {
     private Button prevBtn;
 
     @FXML
+    private Button backBtn;
+
+    @FXML
     private Label questionLbl;
 
     @FXML
@@ -222,6 +225,28 @@ public class entryController {
             System.out.println("✅ Answer saved & progress updated for " + username);
 
         } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    @FXML
+    void back(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/fxmlsViews/home.fxml")
+            );
+            Parent root = loader.load();
+
+            homeController controller = loader.getController();
+            controller.setUsername(username);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
