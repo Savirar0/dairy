@@ -1,0 +1,166 @@
+/* ===============================
+   GLOBAL ROOT STYLES
+   =============================== */
+
+.root {
+    font-family: "Segoe UI";
+    -fx-font-family: "Segoe UI";
+
+    background-color: linear-gradient(to bottom right, #fff1eb, #ace0f9);
+    -fx-background-color: linear-gradient(to bottom right, #fff1eb, #ace0f9);
+}
+
+/* ===============================
+   LABELS
+   =============================== */
+
+.label {
+    color: #2c2c2c;
+    -fx-text-fill: #2c2c2c;
+}
+
+.label.title {
+    font-family: "Segoe Print";
+    -fx-font-family: "Segoe Print";
+
+    font-size: 28px;
+    -fx-font-size: 28px;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+.button {
+    background-color: #ffffffcc;
+    -fx-background-color: #ffffffcc;
+
+    border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+    border-color: #d0d0d0;
+    -fx-border-color: #d0d0d0;
+
+    color: #333333;
+    -fx-text-fill: #333333;
+
+    font-size: 13px;
+    -fx-font-size: 13px;
+
+    padding: 8 18 8 18;
+    -fx-padding: 8 18 8 18;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    -fx-background-color: #ffffff;
+}
+
+.button:pressed {
+    background-color: #e6e6e6;
+    -fx-background-color: #e6e6e6;
+}
+
+/* ===============================
+   TEXT AREA
+   =============================== */
+
+.text-area {
+    background-color: #ffffffee;
+    -fx-background-color: #ffffffee;
+
+    border-color: #cccccc;
+    -fx-border-color: #cccccc;
+
+    border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+    font-size: 14px;
+    -fx-font-size: 14px;
+
+    padding: 10;
+    -fx-padding: 10;
+}
+
+.text-area .content {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+/* ===============================
+   PROGRESS BAR
+   =============================== */
+
+.progress-bar {
+    background-color: #e0e0e0;
+    -fx-background-color: #e0e0e0;
+
+    border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.progress-bar .bar {
+    background-color: linear-gradient(to right, #84fab0, #8fd3f4);
+    -fx-background-color: linear-gradient(to right, #84fab0, #8fd3f4);
+
+    
+    -fx-background-insets: 0;
+
+    border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/* ===============================
+   INPUT FIELD
+   =============================== */
+
+.text-field {
+    background-color: #ffffff;
+    -fx-background-color: #ffffff;
+
+    border-color: #cccccc;
+    -fx-border-color: #cccccc;
+
+    border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+
+    padding: 6 10 6 10;
+    -fx-padding: 6 10 6 10;
+}
+
+/* ===============================
+   ALERT / STATUS LABELS
+   =============================== */
+
+.label.warning {
+    color: #d9534f;
+    -fx-text-fill: #d9534f;
+}
+
+.label.success {
+    color: #28a745;
+    -fx-text-fill: #28a745;
+}
+
+/* ===============================
+   SCROLL BAR (SUBTLE)
+   =============================== */
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    background-color: #c0c0c0;
+    -fx-background-color: #c0c0c0;
+
+    border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}

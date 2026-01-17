@@ -1,0 +1,3 @@
+-Dprism.order=sw
+-Djavafx.animation.fullspeed=true
+-Dprism.verbose=false
