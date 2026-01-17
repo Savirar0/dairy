@@ -1,0 +1,30 @@
+# Compiled files
+bin/
+*.class
+
+# Generated packages
+dist/
+dist_*/
+installer_output/
+portable/
+*.jar
+*.exe
+
+# Libraries
+javafx/
+lib/
+
+# IDE settings
+.vscode/
+.idea/
+*.iml
+
+# Database files
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
