@@ -149,6 +149,7 @@ public class viewEntriesController {
 
             homeController controller = loader.getController();
             controller.setUsername(username);
+            controller.setProg();
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));

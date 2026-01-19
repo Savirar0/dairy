@@ -133,21 +133,23 @@ void shareEn(ActionEvent event) {
 
 
     @FXML
-    void viewEn(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxmlsViews/viewEntries.fxml"));
-            Parent root = loader.load();
+void viewEn(ActionEvent event) {
+    try {
+        FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("/fxmlsViews/viewEntries.fxml")
+        );
+        Parent root = loader.load();
 
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+        viewEntriesController controller = loader.getController();
+        controller.setUsername(username);   
 
-            System.out.println("Successfully loaded view entries ✅");
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
 
-        } catch (IOException ex) {
-            System.err.println("Error loading the viewEntries.fxml file.");
-            ex.printStackTrace();
-        }
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+}
+
 }

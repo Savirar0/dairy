@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "App",
             "projectName": "dairy_3027bec2",
-            "vmArgs": "--module-path \"E:/Studies and stuff/JavFX/javafx-sdk-24.0.2/lib\" --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path \"E:/Studies and stuff/JavFX/openjfx-17.0.17_windows-x64_bin-sdk/javafx-sdk-17.0.17/lib\" --add-modules javafx.controls,javafx.fxml",
 
         }
     ]
