@@ -42,17 +42,17 @@ public class DatabaseConnection {
                         DatabaseConnection.class.getResourceAsStream("/life108.db")) {
 
                     if (is == null) {
-                        throw new RuntimeException("❌ life108.db not found in resources/");
+                        throw new RuntimeException("error: life108.db not found in resources/");
                     }
 
                     Files.copy(is, dbFile.toPath(),
                             StandardCopyOption.REPLACE_EXISTING);
 
-                    System.out.println("✅ Database initialized at " + DB_PATH);
+                    System.out.println("Database initialized at " + DB_PATH);
                 }
             }
         } catch (Exception e) {
-            throw new RuntimeException("❌ Failed to initialize database", e);
+            throw new RuntimeException("error: Failed to initialize database", e);
         }
     }
 }

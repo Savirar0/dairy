@@ -49,7 +49,7 @@ public class entryController {
 
     public void setUsername(String username) {
         this.username = username;
-        loadLastProgress(); // ✅ Load their last question when username is set
+        loadLastProgress();
     }
 
     private void loadLastProgress() {
@@ -63,13 +63,13 @@ public class entryController {
 
             if (rs.next()) {
                 int prog = rs.getInt("progress");
-                currentQuestion = (prog > 0 && prog < 108) ? prog + 1 : 1; // continue from last unanswered
+                currentQuestion = (prog > 0 && prog < 108) ? prog + 1 : 1; 
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        loadCurrentQuestion(); // ✅ load question & saved answer
+        loadCurrentQuestion(); 
     }
 
     private void loadCurrentQuestion() {
@@ -117,7 +117,7 @@ public class entryController {
             stage.setScene(scene);
             stage.show();
 
-            System.out.println("User logged out successfully ✅");
+            System.out.println("User logged out successfully");
 
         } catch (IOException ex) {
             System.err.println("Error loading the login.fxml file during logout.");
@@ -133,12 +133,12 @@ public class entryController {
     @FXML
     void next(ActionEvent event) {
         if (username == null || currentQuestion <= 0) {
-            System.out.println("⚠️ Username or question number missing!");
+            System.out.println("Username or question number missing!");
             return;
         }
 
         if (currentQuestion >= 108) {
-            questionLbl.setText("🎉 You’ve completed all questions!");
+            questionLbl.setText("You’ve completed all questions!");
             nextBtn.setDisable(true);
             return;
         }
@@ -174,10 +174,10 @@ public class entryController {
             progStmt.setString(2, username);
             progStmt.executeUpdate();
 
-            currentQuestion++; // ✅ go to next question
-            loadCurrentQuestion(); // ✅ load next question + saved answer
+            currentQuestion++; 
+            loadCurrentQuestion(); 
 
-            System.out.println("✅ Answer saved, progress updated, and moved to question " + currentQuestion);
+            System.out.println("Answer saved, progress updated, and moved to question " + currentQuestion);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -187,7 +187,7 @@ public class entryController {
     @FXML
     private void save() {
         if (username == null || currentQuestion <= 0) {
-            System.out.println("⚠️ Username or question number missing!");
+            System.out.println("Username or question number missing!");
             return;
         }
 
@@ -222,7 +222,7 @@ public class entryController {
             progStmt.setString(2, username);
             progStmt.executeUpdate();
 
-            System.out.println("✅ Answer saved & progress updated for " + username);
+            System.out.println("Answer saved & progress updated for " + username);
 
         } catch (SQLException e) {
             e.printStackTrace();

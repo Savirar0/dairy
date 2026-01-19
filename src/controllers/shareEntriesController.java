@@ -145,7 +145,7 @@ public class shareEntriesController {
 
         } catch (Exception e) {
             e.printStackTrace();
-            statusLbl.setText("Failed to create PDF ❌");
+            statusLbl.setText("Failed to create PDF: error");
         }
     }
 

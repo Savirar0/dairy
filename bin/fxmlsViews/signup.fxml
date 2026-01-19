@@ -1,37 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom right, #fff1eb, #ace0f9);" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupController">
-
+<VBox alignment="CENTER" prefHeight="460.0" prefWidth="500.0" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom right, #fff1eb, #ace0f9);" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupController">
    <children>
-      <Label fx:id="titlelabel" alignment="TOP_CENTER" layoutX="234.0" text="Memento" textAlignment="CENTER">
+
+      <Label fx:id="titlelabel" text="Memento">
          <font>
-            <Font name="Segoe Print" size="30.0" />
+            <Font name="Segoe Print" size="36.0" />
          </font>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
       </Label>
 
-      <Label fx:id="msg" alignment="CENTER" layoutX="179.0" layoutY="82.0" prefHeight="30.0" prefWidth="250.0" text="Welcome!">
+      <Label fx:id="msg" text="Create your account">
          <font>
-            <Font name="Segoe Print" size="16.0" />
+            <Font name="Segoe Print" size="18.0" />
          </font>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
       </Label>
 
-      <TextField fx:id="usernameField" layoutX="201.0" layoutY="153.0" prefHeight="26.0" prefWidth="196.0" promptText="Username" />
-      <PasswordField fx:id="passwordField" layoutX="201.0" layoutY="187.0" prefHeight="26.0" prefWidth="196.0" promptText="Password" />
-      <PasswordField fx:id="passwordagain" layoutX="201.0" layoutY="223.0" prefHeight="26.0" prefWidth="196.0" promptText="Re-enter Password" />
-
-      <Button fx:id="signupButton" layoutX="254.0" layoutY="280.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: linear-gradient(#f2fff8, #dffbf0);" text="Sign up!" textAlignment="CENTER" />
-
-      <Button fx:id="loginButton" layoutX="254.0" layoutY="340.0" mnemonicParsing="false" onAction="#loginPage" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: linear-gradient(#f2fff8, #dffbf0);" text="Login!" textAlignment="CENTER" textFill="#0f6b52">
+      <TextField fx:id="usernameField" maxWidth="300.0" prefHeight="35.0" prefWidth="250.0" promptText="Username">
          <font>
-            <Font size="13.0" />
+            <Font size="14.0" />
          </font>
+      </TextField>
+
+      <PasswordField fx:id="passwordField" maxWidth="300.0" prefHeight="35.0" prefWidth="250.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+
+      <PasswordField fx:id="passwordagain" maxWidth="300.0" prefHeight="35.0" prefWidth="250.0" promptText="Re-enter Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+
+      <HBox alignment="CENTER">
+         <children>
+            <Button fx:id="signupButton" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(#f2fff8, #dffbf0);" text="Sign up!">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+
+      <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginPage" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(#f2fff8, #dffbf0);" text="Back to Login" textFill="#0f6b52">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="80.0" />
+         </VBox.margin>
       </Button>
+
    </children>
-</AnchorPane>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
